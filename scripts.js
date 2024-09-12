@@ -22,29 +22,41 @@ function addToPage(string){
 
 
 // let's create a global score variable
-// TO DO
+let score = 0;
 
 // now let's write a function that will add two to the current score each time it's called
-// TO DO
+function scoreBasket(){
+    return score += 2;
+}
 
 // we could also have a function for a three-pointer
-// TO DO
+function scoreThree(){
+    return score += 3;
+}
 
 // now let's call that a couple of times, then write the current score to the page
-// TO DO
+scoreBasket(); // score = 2
+scoreBasket(); // score = 4
+addToPage("The score after two baskets: " + score)
+
+
 
 // don't forget, you can call a function that returns a value and assign that returned value to a variable
 // this function will double the parameter's value and return it
 // TO DO
 
 // let's create a number variable and initialize it to a value of 5
-// TO DO
+let number = 5;
+
+function doubleMyNumber(){
+    return number *= 2;
+}
 
 // now let's call doubleMyNumber and pass in number as the parameter, then assign the returned value back to number
-// TO DO
+doubleMyNumber(number);
 
 // and let's write that value to the page
-// TO DO
+addToPage("The number variable after doubling: " + number);
 
 // let's re-write that last function as an arrow function and use it to double the number variable again
 // TO DO
