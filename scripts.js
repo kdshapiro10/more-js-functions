@@ -3,6 +3,8 @@ function addToPage(string){
 	document.querySelector("#section1 ul").innerHTML += `<li>${string}</li>`;
 }
 
+
+// WAS LATE TO CLASS
 // let's write a function that accepts two arguments then adds them together. If the arguments aren't both numbers, concatenate that with the other argument and a space between the args, otherwise perform addition
 // TO DO
 
@@ -59,19 +61,31 @@ doubleMyNumber(number);
 addToPage("The number variable after doubling: " + number);
 
 // let's re-write that last function as an arrow function and use it to double the number variable again
-// TO DO
+let doubleMyNumberArrow = () => number *= 2;
 
 // now call that function again
-// TO DO
+doubleMyNumberArrow(number);
 
 // and write the value to the page again
-// TO DO
+addToPage("The number variable after doubling again: " + number);
 
 // write a function to convert an amount of change under one dollar 
 // to the number and type of coins needed to make that change
 // we will return the number of each type of coin in order using an array like this:
 // [quarters, dimes, nickels, pennies]
-// TO DO
+function calcChange(amount){
+
+    let quarters = Math.floor(amount / 25);
+    amount = amount - (quarters * 25);
+    let dimes = Math.floor(amount / 10);
+    amount = amount - (dimes * 10);
+    let nickels = Math.floor(amount / 5);
+    amount = amount - (nickels * 5);
+    let pennies = amount;
+
+    // return the change in an array
+    return [quarters, dimes, nickels, pennies];
+}
 
 
 // practice from one of the zyBooks activities
