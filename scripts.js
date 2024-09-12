@@ -22,7 +22,7 @@ function addToPage(string){
 // try to access that local variable from the previous function
 // TO DO
 
-
+// GOT TO CLASS AT THIS TIME 
 // let's create a global score variable
 let score = 0;
 
@@ -104,6 +104,8 @@ function calcChange(amount){
 // XXXXXX
 // Convert into a drawBox function
 function drawBox(numRows, numCols, boxChar){
+    let output = "";
+
     if(boxChar === undefined){
         boxChar = "X";
     }
@@ -115,11 +117,13 @@ function drawBox(numRows, numCols, boxChar){
         for (let c = 0; c < numCols; c++) {
             line += boxChar;
         }
-        console.log(line);
+        output += line + "<br>";
     }
+    addToPage(output);
 }
 // call our new function with different arguments
-// TO DO
+drawBox(3, 3);
+drawBox(4, 4, "*");
 
 
 // ------------------------------------
